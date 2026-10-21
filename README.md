@@ -1,3 +1,5 @@
+本文由CODEX全自动编写。
+
 # WiFi 哨兵 · WiFiSentinel
 
 一个借助 AI 开发的 macOS 菜单栏小工具，帮你留意 Wi-Fi 的连接和上网状态，并在你允许时尝试恢复连接。
@@ -48,7 +50,9 @@ WiFi 哨兵想帮你少做一些这样的重复操作：平时待在菜单栏，
 
 ## 安装并运行
 
-目前提供源码，还没有可直接下载的正式安装包。需要 **macOS 13 或更新版本**，以及带 Swift 5.9 或更新编译器的 Xcode Command Line Tools、Python 3 和 zsh。已在 Apple Silicon Mac 上使用，Intel 尚未实机验证。
+目前提供源码，还没有可直接下载的正式安装包。DMG 需要完成 Apple 公证和系统验证后才会在 Releases 提供；当前缺少可用的公证认证，暂不发布安装包。实际状态见[签名与分发说明](docs/DISTRIBUTION.md)。
+
+构建目标最低为 **macOS 13**，需要带 Swift 5.9 或更新编译器的 Xcode Command Line Tools、Python 3 和 zsh。当前实测主机为 Apple Silicon（arm64）和 macOS 27.0.1；较早系统与 Intel 尚未实机验证。
 
 如果尚未安装 Apple 开发工具，可先运行 `xcode-select --install`，按系统提示完成安装。然后在终端执行：
 

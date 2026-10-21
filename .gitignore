@@ -19,3 +19,6 @@ rollback/
 *.p8
 xcuserdata/
 *.xcuserstate
+dist/
+*.dmg
+*.dmg.sha256

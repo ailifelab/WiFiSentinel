@@ -1,3 +1,5 @@
+本文由CODEX全自动编写。
+
 # 依赖与第三方声明
 
 项目自身的代码按 MIT 许可证提供，见 LICENSE。`RecoveryCore` 为仓库内模块。
