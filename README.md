@@ -50,11 +50,19 @@ WiFi 哨兵想帮你少做一些这样的重复操作：平时待在菜单栏，
 
 ## 安装并运行
 
-目前提供源码，还没有可直接下载的正式安装包。DMG 需要完成 Apple 公证和系统验证后才会在 Releases 提供；当前缺少可用的公证认证，暂不发布安装包。实际状态见[签名与分发说明](docs/DISTRIBUTION.md)。
+**[下载 Apple Silicon 安装包（DMG）](https://github.com/ailifelab/WiFiSentinel/releases/download/v0.1-build5.3/WiFiSentinel-0.1-build5.3-macos-arm64.dmg)** · [SHA-256 校验文件](https://github.com/ailifelab/WiFiSentinel/releases/download/v0.1-build5.3/WiFiSentinel-0.1-build5.3-macos-arm64.dmg.sha256) · [发行页面](https://github.com/ailifelab/WiFiSentinel/releases/tag/v0.1-build5.3)
 
-构建目标最低为 **macOS 13**，需要带 Swift 5.9 或更新编译器的 Xcode Command Line Tools、Python 3 和 zsh。当前实测主机为 Apple Silicon（arm64）和 macOS 27.0.1；较早系统与 Intel 尚未实机验证。
+当前版本为 **0.1 / build 5.3**，仅提供 Apple Silicon（arm64）包。最低编译目标为 macOS 13；本轮检查主机为 macOS 27.0.1，较早系统与 Intel 尚未实机验证。
 
-如果尚未安装 Apple 开发工具，可先运行 `xcode-select --install`，按系统提示完成安装。然后在终端执行：
+1. 下载并双击 DMG，将 `WiFiSentinel.app` 拖到同一窗口的 `Applications` 入口。
+2. 从“应用程序”打开哨兵，按 macOS 的标准首次打开提示核对来源并确认。
+3. 点击菜单栏的小眼睛 Wi-Fi 图标，先查看状态。自动恢复每次启动默认关闭，需要时再在应用里阅读风险并确认。
+
+应用和 DMG 均已完成 Developer ID 正式签名、Apple 公证、票据附加及本机 Gatekeeper 检查，无需关闭系统安全检查。更新前请正常退出旧版并保留回滚副本；详细步骤见[安装、卸载与回滚](docs/INSTALL.md)。
+
+### 想从源码运行
+
+需要 Swift 5.9 或更新编译器的 Xcode Command Line Tools、Python 3 和 zsh。尚未安装开发工具时，可运行 `xcode-select --install`，按系统提示完成安装。
 
 ```sh
 git clone https://github.com/ailifelab/WiFiSentinel.git
@@ -63,9 +71,7 @@ cd WiFiSentinel
 open build/candidates/rewrite5-exit0/WiFiSentinel.app
 ```
 
-构建好的 `.app` 位于上面的候选目录。准备长期使用时，可以在正常退出后将它复制到自己的 `~/Applications/` 中，再从那里打开。更新前请留一份旧应用，具体见[安装、卸载与回滚](docs/INSTALL.md)。
-
-自行构建的应用没有正式发行签名或公证。遇到 macOS 安全提示，请先核对来源；不要为运行它关闭系统安全检查。
+自行构建的应用没有正式发行签名或公证。遇到安全提示时请先核对来源；普通使用可以直接下载上面的正式包。
 
 ## 怎么用
 
