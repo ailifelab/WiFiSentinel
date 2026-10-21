@@ -2,7 +2,7 @@
 
 # 安装、更新、卸载与回滚
 
-目前仅提供源码，没有已完成签名、公证和 Gatekeeper 验证的公开安装包。本地准备中的 Developer ID 签名 DMG 不等于已公证发行包；当前缺少公证认证，暂不提供下载。
+目前仅提供源码，没有已完成签名、公证和 Gatekeeper 验证的公开安装包。Developer ID 签名本身不等于已公证发行包；当前缺少公证认证，暂不提供下载。
 
 构建目标最低为 macOS 13；当前检查环境是 Apple Silicon（arm64）和 macOS 27.0.1，较早系统及 Intel 尚未实机验证。自行构建需要 Swift 5.9 或更新编译器、Python 3 和 zsh。
 
